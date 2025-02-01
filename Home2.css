@@ -1,0 +1,272 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+	background: #000000;
+    
+}
+
+header {
+    position: fixed; /* Make the header fixed at the top */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    background: none; /* Remove background */
+    color: white; /* Text color for the header */
+    padding: 1em 0; /* Adjust padding if needed */
+    z-index: 10; /* Ensure it's above other content */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a {
+    color: white; /* Default color */
+    transition: color 0.1s ease; /* Smooth transition for color change */
+}
+
+.nav-links a:hover {
+    color: #ff007f; /* Hover color */
+}
+
+
+/* Add margin-top to the body or main content to avoid it being hidden under the fixed header */
+body {
+    margin-top: 80px; /* Adjust based on header height */
+}
+
+
+section {
+    padding: 2em;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    background-attachment: fixed;
+}
+
+#about {
+    background-image: url('/Images/bg1.jpg');
+}
+
+#about h2 {
+    align-self: flex-start;  /* Aligns the title to the left */
+    padding-left: 60px;  /* Adds space from the left edge */
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+}
+
+#about p {
+	text-align: center;  /* Center text within the paragraph */
+    max-width: 80%;      /* Optional: Set a max-width to prevent the paragraph from stretching too wide */
+}
+
+#portfolio {
+    background-image: url('/Images/bg2.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;  /* Align items to the top */
+    padding-top: 20px;
+    text-align: center;
+}
+
+#portfolio h2 {
+    align-self: flex-start;  /* Aligns the title to the left */
+    padding-left: 60px;  /* Adds space from the left edge */
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.project-box {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.project-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.project-box:hover {
+    transform: scale(1.05);
+}
+
+
+#contact {
+    background-image: url('/Images/bg3.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 4em 2em;
+    text-align: center;
+    position: relative;
+}
+
+#contact::before {
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1; 
+}
+
+#contact h2 {
+    align-self: flex-start;  /* Aligns the title to the left */
+    padding-left: 20px;  /* Adds space from the left edge */
+    color: white;
+    margin: 0;
+    z-index: 2;
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+}
+
+.contact-info {
+    z-index: 2;
+    margin-bottom: 2em;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin: 0.5em 0;
+}
+
+.contact-info a {
+    color: #FF46A2; /* Highlight links */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    z-index: 2;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1em;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border-radius: 4px;
+    border: 1px solid #545454;
+}
+
+.contact-form button {
+    background-color: #FF007F;
+    color: white;
+    padding: 0.5em 2em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.contact-form button:hover {
+    background-color: #FF46A2;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff007F;
+    color: white;
+    border: none;
+    border-radius: 20%;
+    font-size: 1rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: none;
+    z-index: 100;
+}
+
+.back-to-top:hover {
+    background-color: #FF46A2;
+}
+
